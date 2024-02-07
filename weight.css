@@ -1,0 +1,29 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(7, 7, 4);
+    
+}
+
+.btn_one {
+    color: rgb(0, 0, 0);
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    font-size: 18px;
+    font-family: "Comfortaa", cursive;
+    font-weight: bold;
+    background: transparent;
+    transition: 0.4s ease-in-out;
+    margin: 30px 10px;
+  }
+  .btn_one:hover {
+    background: white;
+    cursor: pointer;
+    color: #000;
+  }

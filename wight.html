@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="weight.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodycount Calculator</title>
+    
+
+</head>
+<body>
+ 
+    
+    <div id="contact">
+        <h1>Generate your body count</h1>
+        <br>
+        <form id="myForm" action="https://formspree.io/f/moqgeyle" method="POST">
+          <label>
+            Your Name:         
+            <input name="Name" />
+            <br>
+          </label>
+          <br />
+
+          <label>
+            Your Height in cm: 
+            <input type="Height" name="Height" />
+            <br>
+          </label>
+          <br />
+          <label>
+            Your Weight in kg:
+            <input name="Kilogramm" />
+          </label>
+<br>
+          <button type="submit" class="btn_one">confirm to callculate</button>
+          <br>
+          <p id="message"></p>
+
+<script>
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  fetch('https://formspree.io/f/moqgeyle', {
+    method: 'POST',
+    body: new FormData(event.target), // event.target is the form
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById('message').textContent = 'Looks like you are a virgin lmao! No b1tches?';
+    } else {
+      document.getElementById('message').textContent = 'Error: ' + response.status;
+    }
+  });
+});
+</script>
+        </form>
+
+</body>
+</html>
